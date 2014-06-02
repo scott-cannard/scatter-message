@@ -1,0 +1,15 @@
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\bin\Debug\ScatterMessage.exe
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\bin\Debug\ScatterMessage.pdb
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\Views\MainView.g.cs
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\App.g.cs
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage_MarkupCompile.cache
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage_MarkupCompile.lref
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\Views\MainView.baml
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.g.resources
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.Properties.Resources.resources
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.exe
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.pdb
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.csprojResolveAssemblyReference.cache
+C:\Users\Kristin\Documents\Visual Studio 2010\Projects\ScatterMessage\ScatterMessage\obj\x86\Debug\ScatterMessage.csproj.GenerateResource.Cache

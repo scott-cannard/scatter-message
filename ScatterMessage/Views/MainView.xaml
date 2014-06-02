@@ -1,0 +1,78 @@
+﻿<Window x:Class="ScatterMessage.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xtk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:vm="clr-namespace:ScatterMessage.ViewModels"
+        xmlns:b="clr-namespace:ScatterMessage"
+        Title="Exploding Message"
+        Background="AliceBlue"
+        Height="{Binding WindowHeight, Mode=OneWayToSource}" Width="{Binding WindowWidth, Mode=OneWayToSource}" >
+    
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    
+    <!-- Define Explode/Reset ToggleButton style -->
+    <Window.Resources>
+        <Style TargetType="{x:Type ToggleButton}"
+           x:Key="toggleButtonStyle">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="False">
+                    <Setter Property="Content" Value="Scatter" />
+                </Trigger>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Content" Value="Reset" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <!-- Main layout structure -->
+    <DockPanel>
+        <!-- Layout for user input controls -->
+        <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Center"
+              Height="60" Width="300">
+            <!-- Message-change controls -->
+            <TextBox Text="{Binding BoxText, Mode=OneWayToSource}"
+                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="7"
+                     Width="78" />
+            <Button Content="Change Message" FontSize="9.5"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="7"
+                    Command="{Binding ChangeMessage}" />
+            
+            <!-- Explode/Reset control -->
+            <ToggleButton Style="{StaticResource toggleButtonStyle}"
+                          IsChecked="{Binding IntoAction, Mode=OneWayToSource}"
+                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                          Command="{Binding MainAction}" />
+            
+            <!-- Physics property controls -->
+            <Label Content="Force:"
+                   VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,45,0" />
+            <xtk:IntegerUpDown Value="{Binding Force}"
+                               Minimum="10" Maximum="100" Increment="5"
+                               VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,8,7,0"
+                               Height="20" Width="40" />
+            
+            <Label Content="Friction:"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,45,5" />
+            <xtk:IntegerUpDown Value="{Binding Friction}"
+                               Minimum="0" Maximum="10"
+                               VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,7,8"
+                               Height="20" Width="40" />
+            
+            <Label Content="{Binding Debug}" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        </Grid>
+        
+        <!-- Grid layout for ScatterLabels -->
+        <ItemsControl VerticalAlignment="Center" HorizontalAlignment="Center"
+                      ItemsSource="{Binding Scatterables}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </DockPanel>
+</Window>
